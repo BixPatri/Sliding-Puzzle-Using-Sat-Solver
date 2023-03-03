@@ -1,0 +1,3 @@
+a) The total length for the second fragment is same and is given as 2000 = 776*2 + (464 - 8)
+
+b) The MTU size of the link is 796
