@@ -90,14 +90,13 @@ def add_shift_constraints(solver, variables, n, t):
         solver.add(Or(prev_state_clause))
 
         # Add constraint to ensure Atmost one shift per time step
-        solver.add(Sum([z3.If(clause[i], 0, 1) for i in range(4*n)]) <= 1)
+        solver.add(Sum([z3.If(clause[i], 1, 0) for i in range(4*n)]) <= 1)
 
 add_shift_constraints(s,vars,n,T)
 x = s.check()
-
 print(x)
+print(s)
 if x == sat:
 	m = s.model()
-    
 print(m)
         
