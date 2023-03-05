@@ -16,7 +16,7 @@ def initialize_variables(n, t):
     for i in range(n):
         for j in range(n):
             for k in range(t+1):
-                var_name = "v{}{}{}".format(i, j, k)
+                var_name = "v{}{}{}{}{}".format(i, ' ', j, ' ', k)
                 variables[i][j][k] = Int(var_name)
     return variables
 
