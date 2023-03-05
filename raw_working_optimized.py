@@ -37,22 +37,22 @@ def initial_final_constraints(solver, vars, n):
         for j in range(n):
             k=n*i+j+1
             for l in range(n_b):
-                k=k//2
                 if k%2:
                     solver.add(vars[i][j][T][l])
                 else:
                     solver.add(Not(vars[i][j][T][l]))
+                k=k//2
             
     # Add the initial constraint
     for i in range(n):
         for j in range(n):
             k=matrix[i][j]
             for l in range(n_b):
-                k=k//2
                 if k%2:
                     solver.add(vars[i][j][0][l])
                 else:
                     solver.add(Not(vars[i][j][0][l]))
+                k=k//2
     
 # Add the constraints for shifts
 def add_shift_constraints(solver, variables, n, t):
