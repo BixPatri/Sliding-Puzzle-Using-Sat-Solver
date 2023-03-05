@@ -126,6 +126,10 @@ assignments = add_shift_constraints(s,vars,n,T)
 
 x = s.check()
 
+if n==1:
+    print("sat")
+    exit()
+
 if x == sat:
   m = s.model()
   print("sat")
