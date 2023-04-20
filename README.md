@@ -1,3 +1,6 @@
+# Instructions To run
+`python3 210050009_210050015_210050026_tile_loop.py /path/to/input1.txt > /path/to/output1.txt`
+
 # Sliding-Puzzle-Using-Sat-Solver
 
 OVERVIEW
